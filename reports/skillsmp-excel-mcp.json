@@ -1,0 +1,162 @@
+{
+  "source": "skillsmp",
+  "query": "Excel MCP server CLI agent automation",
+  "request": {
+    "attempts": 1,
+    "max_attempts": 3
+  },
+  "metric_semantics": {
+    "repo_stars": "GitHub repository stars; not installs, ratings, or skill-specific quality",
+    "catalog_updated_at": "SkillsMP indexed update time; verify the repository for current source"
+  },
+  "pagination": {
+    "page": 1,
+    "limit": 10,
+    "total": 11,
+    "totalPages": 2,
+    "hasNext": true,
+    "hasPrev": false,
+    "totalIsExact": false
+  },
+  "rate_limit": {
+    "daily_limit": "50",
+    "daily_remaining": "49",
+    "minute_limit": "10",
+    "minute_remaining": "9"
+  },
+  "raw_candidate_count": 10,
+  "deduplicated_candidate_count": 9,
+  "candidates": [
+    {
+      "source": "skillsmp",
+      "name": "excel-author",
+      "author": "NousResearch",
+      "description": "Build auditable financial workbooks headless via openpyxl.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/excel-author",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-excel-author",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/excel-author",
+      "family_key": "nousresearch/hermes-agent:excel-author",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "comps-analysis",
+      "author": "NousResearch",
+      "description": "Build comparable-company valuation workbooks in Excel.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/comps-analysis",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-comps-analysis",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/comps-analysis",
+      "family_key": "nousresearch/hermes-agent:comps-analysis",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "dcf-model",
+      "author": "NousResearch",
+      "description": "Build discounted cash flow valuation workbooks in Excel.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/dcf-model",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-dcf-model",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/dcf-model",
+      "family_key": "nousresearch/hermes-agent:dcf-model",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "merger-model",
+      "author": "NousResearch",
+      "description": "Build M&A accretion/dilution workbooks in Excel.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/merger-model",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-merger-model",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/merger-model",
+      "family_key": "nousresearch/hermes-agent:merger-model",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "3-statement-model",
+      "author": "NousResearch",
+      "description": "Build integrated IS/BS/CF financial workbooks in Excel.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/3-statement-model",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-3-statement-model",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/3-statement-model",
+      "family_key": "nousresearch/hermes-agent:3-statement-model",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "lbo-model",
+      "author": "NousResearch",
+      "description": "Build leveraged buyout workbooks with IRR/MOIC in Excel.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/optional-skills/finance/lbo-model",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/optional-skills-finance-lbo-model",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-24T04:07:16+00:00",
+      "source_key": "nousresearch/hermes-agent:optional-skills/finance/lbo-model",
+      "family_key": "nousresearch/hermes-agent:lbo-model",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "xlsx",
+      "author": "NousResearch",
+      "description": "Create, read, edit Excel .xlsx spreadsheets and CSVs.",
+      "content_language": "en",
+      "github_url": "https://github.com/NousResearch/hermes-agent/tree/main/skills/productivity/xlsx",
+      "skillsmp_url": "https://skillsmp.com/creators/nousresearch/hermes-agent/skills-productivity-xlsx",
+      "repo_stars": 227004,
+      "catalog_updated_at": "2026-07-25T00:10:39+00:00",
+      "source_key": "nousresearch/hermes-agent:skills/productivity/xlsx",
+      "family_key": "nousresearch/hermes-agent:xlsx",
+      "aliases": []
+    },
+    {
+      "source": "skillsmp",
+      "name": "data-report",
+      "author": "nexu-io",
+      "description": "Turns CSV, Excel, or JSON data into a polished visual report page.",
+      "content_language": "zh",
+      "github_url": "https://github.com/nexu-io/open-design/tree/main/skills/data-report",
+      "skillsmp_url": "https://skillsmp.com/creators/nexu-io/open-design/skills-data-report",
+      "repo_stars": 84364,
+      "catalog_updated_at": "2026-05-22T08:39:32+00:00",
+      "source_key": "nexu-io/open-design:skills/data-report",
+      "family_key": "nexu-io/open-design:data-report",
+      "aliases": [
+        {
+          "language": "zh",
+          "github_url": "https://github.com/nexu-io/open-design/tree/main/plugins/_official/examples/data-report"
+        }
+      ]
+    },
+    {
+      "source": "skillsmp",
+      "name": "data-analysis",
+      "author": "bytedance",
+      "description": "Use this skill when the user uploads Excel (.xlsx/.xls) or CSV files and wants to perform data analysis, generate statistics, create summaries, pivot tables, SQL queries, or any form of structured data exploration. Supports multi-sheet Excel workbooks, aggregation, filtering, joins, and exporting results to CSV/JSON/Markdown.",
+      "content_language": "en",
+      "github_url": "https://github.com/bytedance/deer-flow/tree/main/skills/public/data-analysis",
+      "skillsmp_url": "https://skillsmp.com/creators/bytedance/deer-flow/skills-public-data-analysis",
+      "repo_stars": 79506,
+      "catalog_updated_at": "2026-04-21T01:53:18+00:00",
+      "source_key": "bytedance/deer-flow:skills/public/data-analysis",
+      "family_key": "bytedance/deer-flow:data-analysis",
+      "aliases": []
+    }
+  ]
+}

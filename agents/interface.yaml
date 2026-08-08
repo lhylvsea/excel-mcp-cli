@@ -1,0 +1,39 @@
+interface:
+  display_name: "ExcelMcp CLI"
+  short_description: "Use excelcli to edit, calculate, format, chart, and automate uploaded Windows Excel workbooks"
+  default_prompt: "Use $excel-mcp-cli for this uploaded or named .xlsx/.xlsm workbook. Resolve the local excelcli.exe, preserve the original unless overwrite is explicit, open one session, inspect before mutation, perform the requested formulas/charts/formatting/Tables/PivotTables/Power Query/DAX/VBA work, read back the result, capture a screenshot for visual changes, save and close the session, then report exact output paths and evidence. Prefer file-based JSON arguments in PowerShell and never claim success without read-back verification."
+  examples:
+    - "使用 excel-mcp-cli 给上传的 Excel 增加图表并保存副本"
+    - "使用 excelcli 给产量表写公式并验证合计"
+    - "使用 excel-mcp-cli 给 xlsm 写入 VBA 模块，但先不要运行"
+    - "批量格式化这个目录里的 Excel 工作簿并逐个输出结果"
+compatibility:
+  canonical_format: "agent-skills"
+  adapter_targets:
+    - "openai"
+    - "claude"
+    - "generic"
+    - "agent-skills-compatible"
+    - "vscode"
+  activation:
+    mode: "manual"
+    paths: []
+  execution:
+    context: "inline"
+    shell: "powershell"
+  trust:
+    source_tier: "local"
+    remote_inline_execution: "forbid"
+    remote_metadata_policy: "allow read-only source review only"
+    generated_public_claims: "evidence-bound"
+  permissions:
+    network: "none required at runtime"
+    file_write: "target workbook copies and requested output assets only"
+    subprocess: "local excelcli.exe and read-only helper scripts"
+    interactive: "ask only for ambiguous files, locked workbooks, visible Excel closing, or macro trust/execute decisions"
+  degradation:
+    openai: "native skill"
+    claude: "neutral-source-plus-adapter"
+    generic: "neutral-source"
+    agent-skills-compatible: "canonical-source"
+    vscode: "neutral-source-plus-review-notes"

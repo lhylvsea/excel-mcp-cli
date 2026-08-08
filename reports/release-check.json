@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "phase": "local",
+  "root": ".",
+  "version": "0.1.0",
+  "repository": null,
+  "summary": {
+    "pass": 7,
+    "warn": 2,
+    "block": 0
+  },
+  "notes": [
+    "Local package validation, trigger evaluation, secret scan, branch/diff checks, and unit tests passed on the reference host.",
+    "The two local warnings were an uncommitted development worktree and the absence of remote clean-install evidence before publication.",
+    "The public release workflow must re-run discovery and clean installation against the tagged repository."
+  ]
+}

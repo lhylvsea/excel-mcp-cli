@@ -14,7 +14,7 @@ Power Query、DAX、VBA、截图和批量工作簿处理。
 
 ## 安装到 Codex
 
-公开仓库 Skill 的通用安装写法是 'npx skills add <owner>/<repo> --skill excel-mcp-cli'；本包当前是本机安装包，因此使用下面的本地复制命令，不需要联网安装。
+公开仓库 Skill 的安装命令是 `npx skills add lhylvsea/excel-mcp-cli --skill excel-mcp-cli`；本包当前是本机安装包，因此使用下面的本地复制命令，也可以直接从该公开仓库安装。
 上游项目与命令说明：https://github.com/sbroenne/mcp-server-excel
 
 将整个 skill 目录复制到 Codex 的 skills 目录：

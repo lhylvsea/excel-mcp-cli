@@ -1,0 +1,37 @@
+{
+  "version": "0.1.0",
+  "cases": [
+    {
+      "id": "formula-readback",
+      "prompt": "Use excel-mcp-cli to add a revenue formula to an uploaded workbook and preserve the original.",
+      "input_files": [
+        "an uploaded .xlsx workbook"
+      ],
+      "baseline_output": "May edit the wrong file, skip session cleanup, or report success without read-back.",
+      "with_skill_output": "Create an output copy, use one CLI session, write formulas, read back formulas and calculated values, save only after verification, and report both paths.",
+      "assertions": [
+        "source workbook is not overwritten unless explicit",
+        "session ID is parsed from create/open response",
+        "formula and calculated value are read back",
+        "output path is reported"
+      ],
+      "human_notes": "Check that the formula references the intended headers and that the reported total is plausible."
+    },
+    {
+      "id": "chart-screenshot",
+      "prompt": "Use excelcli to add a chart to an uploaded workbook and show me the result.",
+      "input_files": [
+        "an uploaded .xlsx workbook"
+      ],
+      "baseline_output": "May create a chart without checking overlap or providing visual evidence.",
+      "with_skill_output": "Create the chart with a target range, capture a PNG including source data and chart, inspect it, and report the screenshot path.",
+      "assertions": [
+        "chart creation returns success",
+        "chart is listed or otherwise read back",
+        "screenshot includes the requested visual area",
+        "session closes after validation"
+      ],
+      "human_notes": "Check that the chart is not clipped, overlapped, or based on the wrong range."
+    }
+  ]
+}

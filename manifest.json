@@ -1,0 +1,38 @@
+{
+  "name": "excel-mcp-cli",
+  "version": "0.1.0",
+  "description": "Chinese-first Codex skill for local ExcelMcp CLI workbook automation.",
+  "author": "向阳乔木",
+  "owner": "向阳乔木",
+  "updated_at": "2026-08-08",
+  "status": "active",
+  "maturity_tier": "governed",
+  "lifecycle_stage": "library",
+  "context_budget_tier": "production",
+  "review_cadence": "quarterly",
+  "upstream_inspiration": "https://github.com/sbroenne/mcp-server-excel",
+  "upstream_sync": {
+    "reviewed_at": "2026-08-08",
+    "policy": "semantic adoption; do not mirror upstream wholesale"
+  },
+  "license": "MIT",
+  "entrypoint": "SKILL.md",
+  "platforms": [
+    "windows"
+  ],
+  "requires": [
+    "Microsoft Excel 2016+",
+    "excelcli.exe"
+  ],
+  "release_gates": [
+    "prior_art_research",
+    "creation_handoff",
+    "validate_skill",
+    "trigger_eval",
+    "export_skill_ir",
+    "install_verification",
+    "runtime_smoke_test",
+    "secret_scan",
+    "evidence_bound_public_claims"
+  ]
+}

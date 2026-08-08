@@ -1,0 +1,200 @@
+{
+  "ok": true,
+  "threshold": 0.6,
+  "description_concepts": [
+    "action",
+    "cli",
+    "excel",
+    "source_material"
+  ],
+  "missing_description_concepts": [],
+  "summary": {
+    "total": 13,
+    "passed": 13,
+    "false_positive": 0,
+    "false_negative": 0,
+    "pass_rate": 1.0
+  },
+  "failures": [],
+  "results": {
+    "should_trigger": [
+      {
+        "prompt": "我上传了一个 xlsx，请使用 excel-mcp-cli 增加销售额柱形图并保存副本。",
+        "family": "cn_chart_uploaded_workbook",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "用 excelcli 给这个工作簿写公式，验证合计并输出新文件。",
+        "family": "cn_formula_workbook",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "使用 Excel MCP CLI 在这个 xlsm 中写入一个 VBA 模块，先不要运行。",
+        "family": "cn_vba_xlsm",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "Use excelcli to format the uploaded Excel workbook, add a table, and capture a screenshot.",
+        "family": "en_format_uploaded_workbook",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "在这个 Excel 文件中刷新 Power Query，并报告刷新结果。",
+        "family": "cn_powerquery_file",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "action",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "使用 excel-mcp-cli 批量修改这个目录里的工作簿。",
+        "family": "cn_batch_workbooks",
+        "expected_trigger": true,
+        "predicted_trigger": true,
+        "passed": true,
+        "score": 1.0,
+        "matched_concepts": [
+          "action",
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      }
+    ],
+    "should_not_trigger": [
+      {
+        "prompt": "只解释一下 Excel CLI 是什么，不修改任何文件。",
+        "family": "explain_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.75,
+        "matched_concepts": [
+          "cli",
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": "只解释"
+      },
+      {
+        "prompt": "用 pandas 分析这个 CSV，生成统计摘要。",
+        "family": "pandas_csv_analysis",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": "pandas"
+      },
+      {
+        "prompt": "请把这段英文翻译成中文。",
+        "family": "translation_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.0,
+        "matched_concepts": [],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "在 Linux 服务器上用 openpyxl-only 处理 xlsx。",
+        "family": "unsupported_runtime",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": "openpyxl-only"
+      }
+    ],
+    "near_neighbor": [
+      {
+        "prompt": "请告诉我 Excel 中如何手动插入柱形图，但不要修改文件。",
+        "family": "manual_excel_instruction",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "帮我审阅这段 VBA 代码的逻辑，不要打开或修改工作簿。",
+        "family": "vba_review_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      },
+      {
+        "prompt": "给这个 Excel 项目想几个图表标题，先不要操作文件。",
+        "family": "copywriting_only",
+        "expected_trigger": false,
+        "predicted_trigger": false,
+        "passed": true,
+        "score": 0.5,
+        "matched_concepts": [
+          "excel",
+          "source_material"
+        ],
+        "negative_pattern": null
+      }
+    ]
+  }
+}

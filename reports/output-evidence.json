@@ -1,0 +1,17 @@
+{
+  "evidence_kind": "provider_backed",
+  "ok": true,
+  "provider": "Local ExcelMcp CLI 1.10.5 with Microsoft Excel desktop",
+  "date": "2026-08-08",
+  "workbook": "reference demo workbook; host-local path intentionally omitted",
+  "command_path": "scripts/runtime-smoke.ps1",
+  "machine_acceptance": "PASS",
+  "observations": {
+    "session_open": true,
+    "range_readback": "Sheet1!A1:D5",
+    "readback_revenue_values": [81600, 78200, 77700, 237500],
+    "session_close": true,
+    "remaining_excel_process_count": 0
+  },
+  "scope": "This proves the local CLI/session adapter and readback path on the reference demo workbook. It does not prove every workbook feature, external connection, or VBA execution path."
+}

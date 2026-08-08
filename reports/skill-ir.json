@@ -1,0 +1,121 @@
+{
+  "schema_version": "2.0.0-qiaomu-lite",
+  "generated_at": "2026-08-08",
+  "package": {
+    "name": "excel-mcp-cli",
+    "version": "0.1.0",
+    "owner": "向阳乔木",
+    "maturity_tier": "governed",
+    "lifecycle_stage": "library",
+    "upstream_inspiration": "https://github.com/sbroenne/mcp-server-excel",
+    "upstream_sync": {
+      "reviewed_at": "2026-08-08",
+      "policy": "semantic adoption; do not mirror upstream wholesale"
+    }
+  },
+  "intent": {
+    "description": "使用本机 ExcelMcp CLI（excelcli）操作真实 Microsoft Excel 工作簿。触发词包括：使用 excel-mcp-cli、使用 excelcli、用 Excel MCP CLI 操作这个表格、给上传的 Excel 增加图表、写公式、写宏、写 VBA、格式化、刷新 Power Query、批量修改工作簿。适用于 Windows 桌面版 Excel 2016+ 与 .xlsx/.xlsm；不适用于 Linux/macOS 无桌面服务器、纯解释、pandas/openpyxl-only 或非 Excel 文件。",
+    "job_to_be_done": "使用本机 ExcelMcp CLI（excelcli）操作真实 Microsoft Excel 工作簿。触发词包括：使用 excel-mcp-cli、使用 excelcli、用 Excel MCP CLI 操作这个表格、给上传的 Excel 增加图表、写公式、写宏、写 VBA、格式化、刷新 Power Query、批量修改工作簿。适用于 Windows 桌面版 Excel 2016+ 与 .xlsx/.xlsm；不适用于 Linux/macOS 无桌面服务器、纯解释、pandas/openpyxl-only 或非 Excel 文件。",
+    "target_users": [
+      "Qiaomu operator"
+    ],
+    "inputs": [],
+    "outputs": [],
+    "exclusions": [],
+    "qiaomu_defaults": {}
+  },
+  "triggers": {
+    "should_trigger": [
+      "我上传了一个 xlsx，请使用 excel-mcp-cli 增加销售额柱形图并保存副本。",
+      "用 excelcli 给这个工作簿写公式，验证合计并输出新文件。",
+      "使用 Excel MCP CLI 在这个 xlsm 中写入一个 VBA 模块，先不要运行。",
+      "Use excelcli to format the uploaded Excel workbook, add a table, and capture a screenshot.",
+      "在这个 Excel 文件中刷新 Power Query，并报告刷新结果。",
+      "使用 excel-mcp-cli 批量修改这个目录里的工作簿。"
+    ],
+    "should_not_trigger": [
+      "只解释一下 Excel CLI 是什么，不修改任何文件。",
+      "用 pandas 分析这个 CSV，生成统计摘要。",
+      "请把这段英文翻译成中文。",
+      "在 Linux 服务器上用 openpyxl-only 处理 xlsx。"
+    ],
+    "near_neighbor": [
+      "请告诉我 Excel 中如何手动插入柱形图，但不要修改文件。",
+      "帮我审阅这段 VBA 代码的逻辑，不要打开或修改工作簿。",
+      "给这个 Excel 项目想几个图表标题，先不要操作文件。"
+    ]
+  },
+  "workflow": {
+    "router_rules": [],
+    "compact_workflow": [],
+    "gate_ladder": [],
+    "output_contract": []
+  },
+  "resources": {
+    "references": [
+      "references\\cli-workflows.md",
+      "references\\output-contract.md",
+      "references\\vba-and-powerquery.md"
+    ],
+    "scripts": [],
+    "evals": [
+      "evals\\output_cases.json",
+      "evals\\trigger_cases.json"
+    ],
+    "reports": [
+      "reports\\creation-handoff.md",
+      "reports\\install-verification.md",
+      "reports\\output-evidence.json",
+      "reports\\prior-art-research.md",
+      "reports\\release-check.json",
+      "reports\\skill-ir.json",
+      "reports\\skillsmp-excel-cli.json",
+      "reports\\skillsmp-excel-mcp.json",
+      "reports\\trigger-eval.json"
+    ]
+  },
+  "portability": {
+    "canonical_format": "agent-skills",
+    "adapter_targets": [
+      "openai",
+      "claude",
+      "generic",
+      "agent-skills-compatible",
+      "vscode"
+    ],
+    "activation": {
+      "mode": "manual",
+      "paths": []
+    },
+    "execution": {
+      "context": "inline",
+      "shell": "powershell"
+    },
+    "trust": {
+      "source_tier": "local",
+      "remote_inline_execution": "forbid",
+      "remote_metadata_policy": "allow read-only source review only",
+      "generated_public_claims": "evidence-bound"
+    },
+    "permissions": {
+      "network": "none required at runtime",
+      "file_write": "target workbook copies and requested output assets only",
+      "subprocess": "local excelcli.exe and read-only helper scripts",
+      "interactive": "ask only for ambiguous files, locked workbooks, visible Excel closing, or macro trust/execute decisions"
+    },
+    "degradation": {
+      "openai": "native skill",
+      "claude": "neutral-source-plus-adapter",
+      "generic": "neutral-source",
+      "agent-skills-compatible": "canonical-source",
+      "vscode": "neutral-source-plus-review-notes"
+    }
+  },
+  "gates": {},
+  "evidence_boundary": {
+    "generated_reports_are_evidence": true,
+    "planned_work_is_evidence": false,
+    "missing_external_or_human_evidence_label": "missing evidence",
+    "public_claim_policy": "claim only what local validation, install proof, human review, or provider-backed evidence actually supports"
+  }
+}

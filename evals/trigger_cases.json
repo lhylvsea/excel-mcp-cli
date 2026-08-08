@@ -1,0 +1,125 @@
+{
+  "recommended_threshold": 0.6,
+  "description_required_concepts": [
+    "excel",
+    "cli",
+    "source_material",
+    "action"
+  ],
+  "positive_concepts": {
+    "excel": [
+      "excel",
+      "xlsx",
+      "xlsm",
+      "workbook",
+      "工作簿",
+      "表格"
+    ],
+    "cli": [
+      "excel-mcp-cli",
+      "excelcli",
+      "excel mcp cli",
+      "excel cli"
+    ],
+    "source_material": [
+      "workbook",
+      "xlsx",
+      "xlsm",
+      "上传",
+      "表格",
+      "工作簿",
+      "文件"
+    ],
+    "action": [
+      "增加图表",
+      "写公式",
+      "写宏",
+      "写 vba",
+      "格式化",
+      "刷新 power query",
+      "批量修改",
+      "edit",
+      "chart",
+      "formula",
+      "macro",
+      "format",
+      "power query"
+    ],
+    "agent": [
+      "智能体",
+      "agent",
+      "codex",
+      "claude",
+      "cursor"
+    ]
+  },
+  "negative_patterns": [
+    "只解释",
+    "仅说明",
+    "不修改",
+    "只翻译",
+    "pandas",
+    "openpyxl-only",
+    "linux 服务器",
+    "brainstorm only",
+    "just explain"
+  ],
+  "should_trigger": [
+    {
+      "text": "我上传了一个 xlsx，请使用 excel-mcp-cli 增加销售额柱形图并保存副本。",
+      "family": "cn_chart_uploaded_workbook"
+    },
+    {
+      "text": "用 excelcli 给这个工作簿写公式，验证合计并输出新文件。",
+      "family": "cn_formula_workbook"
+    },
+    {
+      "text": "使用 Excel MCP CLI 在这个 xlsm 中写入一个 VBA 模块，先不要运行。",
+      "family": "cn_vba_xlsm"
+    },
+    {
+      "text": "Use excelcli to format the uploaded Excel workbook, add a table, and capture a screenshot.",
+      "family": "en_format_uploaded_workbook"
+    },
+    {
+      "text": "在这个 Excel 文件中刷新 Power Query，并报告刷新结果。",
+      "family": "cn_powerquery_file"
+    },
+    {
+      "text": "使用 excel-mcp-cli 批量修改这个目录里的工作簿。",
+      "family": "cn_batch_workbooks"
+    }
+  ],
+  "should_not_trigger": [
+    {
+      "text": "只解释一下 Excel CLI 是什么，不修改任何文件。",
+      "family": "explain_only"
+    },
+    {
+      "text": "用 pandas 分析这个 CSV，生成统计摘要。",
+      "family": "pandas_csv_analysis"
+    },
+    {
+      "text": "请把这段英文翻译成中文。",
+      "family": "translation_only"
+    },
+    {
+      "text": "在 Linux 服务器上用 openpyxl-only 处理 xlsx。",
+      "family": "unsupported_runtime"
+    }
+  ],
+  "near_neighbor": [
+    {
+      "text": "请告诉我 Excel 中如何手动插入柱形图，但不要修改文件。",
+      "family": "manual_excel_instruction"
+    },
+    {
+      "text": "帮我审阅这段 VBA 代码的逻辑，不要打开或修改工作簿。",
+      "family": "vba_review_only"
+    },
+    {
+      "text": "给这个 Excel 项目想几个图表标题，先不要操作文件。",
+      "family": "copywriting_only"
+    }
+  ]
+}
